@@ -1,13 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.app-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 100px;
+  background: #FFF;
+  padding: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.title {
+  color: #171717;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1;
+}
+.subtitle {
+  color: #171717;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.wild-pokemon {
+  min-height: 300px;
+  background: firebrick;
+  padding: 15px;
+}
+.wild-pokemon h2 {
+  color: #F3F3F3;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+
+.wild-pokemon .sprite {
+  display: block;
+  width: 150px;
+  margin: 0px auto;
+}
+
+.wild-pokemon h3 {
+  color: #F3F3F3;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.wild-pokemon .catch-btn {
+  width: 200px;
+  height: 35px;
+  display: block;
+  margin: 25px auto;
+  background: #FFCE00;
+  border: none;
+  outline: none;
+  color: #171717;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.wild-pokemon .catch-btn:active {
+  background: #F7A800;
+}
+
+.pokedex {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  overflow: scroll;
+}
+
+.pokedex-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 15px;
+}
+
+.pokedex-list .pokemon {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  min-height: 150px;
+  padding: 15px;
+  background: #F3F3F3;
+} 
+
+.pokedex-list .pokemon .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background: firebrick;
+  color: #F3F3F3;
+  font-size: 28px;
+  cursor: pointer;
+
+}
+
+.pokedex-list .pokemon .sprite {
+  width: 100%;
 }
